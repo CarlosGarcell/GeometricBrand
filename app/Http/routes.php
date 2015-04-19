@@ -12,10 +12,17 @@
 */
 
 Route::get('/', 'WelcomeController@index');
+Route::post('mail', ['middleware' => 'guest', 'uses' => 'MailController@requestInfo']);
 
-Route::get('home', 'HomeController@index');
+Route::get('/mailinfo', function()
+{
+	$data = [
+		'name' => 'Carlos',
+		'lastName' => 'Garcell',
+		'email' => 'c.garcell91@gmail.com',
+		'phone' => '04143638392',
+		'message' => 'This is my description test'
+	];
 
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+	return view('emails.info', compact("data"));
+});
