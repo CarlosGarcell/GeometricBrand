@@ -1,0 +1,85 @@
+html, body {
+	color: white;
+	-webkit-font-smoothing: antialiased;
+	height: 100%;
+	z-index: 10;
+}
+
+.content {
+	padding-top: 100px;
+}
+
+.pageHeader {
+	max-width: 50% !important;
+	margin: 0 auto;
+	float: none;
+	border-bottom: 5px solid white;
+	text-align: center;
+}
+
+.upcoming {
+	max-width: 65% !important;
+	margin: 0 auto;
+	float: none;
+	border-bottom: 2px solid white;
+	text-align: center;
+}
+
+.socialNetworks {
+	max-width: 65% !important;
+	margin: 0 auto;
+	float: none;
+	border-bottom: 2px solid white;
+	text-align: center;	
+}
+
+.socialNetworksList ul {
+	vertical-align: middle;
+}
+
+.socialNetworksList li {
+	display: inline;
+	list-style: none;
+}
+
+.contactForm {
+	max-width: 65% !important;
+	margin: 0 auto;
+	float: none;
+	text-align: center;
+}
+
+.userData {
+	padding-bottom: 15px;
+}
+
+.userData input, .userData textarea {
+	border-color: white;
+	background: transparent;
+	color: white;
+	transition : .5s ease-in;
+}
+
+@media (min-width: 400px) and (max-width: 991px) {
+	.userData section:nth-child(2) {
+		padding-top: 15px;
+	}
+}
+
+/* Placeholder styling */
+
+::-webkit-input-placeholder {
+   color: white !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white !important;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white !important;  
+}
+
+:-ms-input-placeholder {  
+   color: white !important;  
+}

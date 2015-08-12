@@ -40,7 +40,7 @@
 		</div>
 
 		<!-- Preloader -->
-		<!-- <div id="loader"><div class="bar"></div></div> -->
+		<div id="loader"><div class="bar"></div></div>
 		<!-- //Preloader -->
 		
 			<!-- CONTACT INFO -->
@@ -63,24 +63,24 @@
 							</div>
 							
 							<!-- CONTACT FORM -->
-							<div id="contact-form">
+							<div id="contactForm">
 								<div id="sendmessage">Su mensaje ha sido enviado. ¡Muchas Gracias!</div>
 								{!! Form::open(['action' => 'MailController@requestInfo', 'class' => 'contactForm', 'role' => 'form']) !!}
 									<div class="row">
-										<div class="form-group col-xs-6 col-ss-12">
+										<div class="form-group  col-md-6">
 											{!! Form::text('name', null, ['id' => 'name', 'placeholder' => 'Nombre', 'autofocus' => true, 'data-rule' => 'maxlen:4', 
 												'data-msg' => 'Por favor, ingrese al menos 4 carácteres']) !!}
 											<div class="validation"></div>
 										</div>
-										<div class="form-group col-xs-6 col-ss-12">
+										<div class="form-group  col-md-6">
 											{!! Form::text('last_name', null, ['id' => 'last-name', 'placeholder' => 'Apellido', 'data-rule' => 'maxlen:4', 'data-msg' => 'Por favor, ingrese al menos 4 carácteres']) !!}
 											<div class="validation"></div>
 										</div>
-										<div class="form-group col-xs-6 col-ss-12">
+										<div class="form-group  col-md-6">
 											{!! Form::text('email', null, ['id' => 'email', 'placeholder' => 'Email', 'data-rule' => 'email', 'data-msg' => 'Por favor, ingrese un email correcto']) !!}
 											<div class="validation"></div>
 										</div>
-										<div class="form-group col-xs-6 col-ss-12">
+										<div class="form-group  col-md-6">
 											{!! Form::text('phone', null, ['id' => 'phone', 'placeholder' => 'Teléfono', 'data-rule' => 'maxlen:4', 'data-msg' => 'Por favor, ingrese in mínimo de 8 carácteres']) !!}
 											<div class="validation"></div>
 										</div>

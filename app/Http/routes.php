@@ -13,16 +13,7 @@
 
 Route::get('/', 'WelcomeController@index');
 Route::post('mail', ['middleware' => 'guest', 'uses' => 'MailController@requestInfo']);
-
-Route::get('/mailinfo', function()
+Route::get('contacts', function()
 {
-	$data = [
-		'name' => 'Carlos',
-		'lastName' => 'Garcell',
-		'email' => 'c.garcell91@gmail.com',
-		'phone' => '04143638392',
-		'message' => 'This is my description test'
-	];
-
-	return view('emails.info', compact("data"));
+	return view('contacts1');
 });
