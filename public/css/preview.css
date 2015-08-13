@@ -2,11 +2,15 @@ html, body {
 	color: white;
 	-webkit-font-smoothing: antialiased;
 	height: 100%;
-	z-index: 10;
+}
+
+@font-face {
+	font-family: XtreemMedium;
+	src: url('/fonts/XtreemMedium_Demo.ttf');
 }
 
 .content {
-	padding-top: 100px;
+	padding-top: 80px;
 }
 
 .pageHeader {
@@ -15,22 +19,40 @@ html, body {
 	float: none;
 	border-bottom: 5px solid white;
 	text-align: center;
+	font-family: XtreemMedium;
+}
+
+.pageHeaderText {
+	padding-bottom: 10px;
+}
+
+.pageHeader h2 {
+	font-size: 5em;
 }
 
 .upcoming {
-	max-width: 65% !important;
+	max-width: 60% !important;
 	margin: 0 auto;
 	float: none;
-	border-bottom: 2px solid white;
+	border-bottom: 3px solid white;
 	text-align: center;
 }
 
+.upcoming h3 {
+	font-size: 2em;
+	font-family: "Helvetica";
+}
+
 .socialNetworks {
-	max-width: 65% !important;
+	max-width: 60% !important;
 	margin: 0 auto;
 	float: none;
-	border-bottom: 2px solid white;
+	border-bottom: 3px solid white;
 	text-align: center;	
+}
+
+.socialNetworks h3 {
+	font-family: "Helvetica";
 }
 
 .socialNetworksList ul {
@@ -38,6 +60,7 @@ html, body {
 }
 
 .socialNetworksList li {
+	font-family: "Helvetica";
 	display: inline;
 	list-style: none;
 }
@@ -58,6 +81,32 @@ html, body {
 	background: transparent;
 	color: white;
 	transition : .5s ease-in;
+	border-radius: 0px;
+}
+
+.userData input:hover, .userData input:focus, .userData textarea:hover, .userData textarea:focus {
+	background-color: white;
+	color: purple;
+	transition: .5s ease-in;
+	font-weight: 400;	
+}
+
+.contactForm h3 {
+	font-family: "Helvetica";
+}
+
+#submitButton {
+	width: 100%;
+	background-color: transparent;
+	border-color: transparent;
+	transition: .5s ease-in;
+}
+
+#submitButton:hover, #submitButton:focus {
+	transition: .5s ease-in;
+	background-color: white;
+	color: purple;
+	font-weight: 400;
 }
 
 @media (min-width: 400px) and (max-width: 991px) {
@@ -69,7 +118,15 @@ html, body {
 /* Placeholder styling */
 
 ::-webkit-input-placeholder {
-   color: white !important;
+   color: #fff !important;
+}
+
+#email::-webkit-input-placeholder {
+	text-align: center;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+	color: purple !important;
 }
 
 :-moz-placeholder { /* Firefox 18- */
@@ -78,6 +135,14 @@ html, body {
 
 ::-moz-placeholder {  /* Firefox 19+ */
    color: white !important;  
+}
+
+[placeholder]:focus:-moz-placeholder {
+	color: purple !important;
+}
+
+[placeholder]:focus::-moz-placeholder {
+	color: purple !important;
 }
 
 :-ms-input-placeholder {  

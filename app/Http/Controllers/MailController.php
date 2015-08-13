@@ -1,4 +1,4 @@
-`<?php namespace App\Http\Controllers;
+<?php namespace App\Http\Controllers;
 
 use Mailers\Mailer;
 use App\Http\Requests\SendMailRequest;
@@ -6,7 +6,8 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class MailController extends Controller {
+class MailController extends Controller 
+{
 
 	protected $mailer;
 
@@ -20,13 +21,13 @@ class MailController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function sendMailingInfoToEmailHAndler(SendMailRequest $request)
+	public function sendMailingInfoToEmailHandler(SendMailRequest $request)
 	{
 		$input = $request->all();
 		$name = $input['name'];
-		$lastName = $input['last_name'];
+		$lastName = $input['lastName'];
 		$email = $input['email'];
-		$phone = $input['phone'];
+		// $phone = $input['phone'];
 		$requestedInfo = $input['message'];
 		$pathToImage = public_path()."/images/Geometric-modelo.png";
 

@@ -6,7 +6,3 @@ $.backstretch([
 	"/images/IMAGEN_5.jpg",
 	"/images/IMAGEN_6.jpg"
 ], {duration : 3000, fade: 800});
-
-// $(function() {
-// 	$("#backstretch").backstretch("/images/IMAGEN_1.jpg");
-// });

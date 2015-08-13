@@ -12,8 +12,4 @@
 */
 
 Route::get('/', 'WelcomeController@index');
-Route::post('mail', ['middleware' => 'guest', 'uses' => 'MailController@requestInfo']);
-Route::get('contacts', function()
-{
-	return view('contacts1');
-});
+Route::post('mail', 'MailController@sendMailingInfoToEmailHandler');

@@ -23,9 +23,9 @@ class SendMailRequest extends Request {
 	{
 		return [
 			'name' => 'required',
-			'last_name' => 'required',
+			'lastName' => 'required',
 			'email' => 'required|email',
-			'phone' => 'required|min:7'
+			// 'phone' => 'required|min:7'
 		];
 	}
 
