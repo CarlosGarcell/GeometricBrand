@@ -145,6 +145,7 @@ return [
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
+		'Laracasts\Flash\FlashServiceProvider'
 
 	],
 
@@ -174,6 +175,7 @@ return [
 		'Eloquent'  => 'Illuminate\Database\Eloquent\Model',
 		'Event'     => 'Illuminate\Support\Facades\Event',
 		'File'      => 'Illuminate\Support\Facades\File',
+		'Flash'     => 'Laracasts\Flash\Flash',
 		'Form'	    => 'Illuminate\Html\FormFacade',
 		'HTML'	    => 'Illuminate\Html\HtmlFacade',
 		'Hash'      => 'Illuminate\Support\Facades\Hash',

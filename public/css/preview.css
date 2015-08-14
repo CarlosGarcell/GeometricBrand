@@ -166,7 +166,6 @@ html, body {
 
 [placeholder]:focus::-webkit-input-placeholder, [placeholder]:hover::-webkit-input-placeholder {
 	color: purple !important;
-	transition: .5s ease-in;
 }
 
 :-moz-placeholder, ::-moz-placeholder { /* Firefox 18- & Firefox 19+ */
@@ -175,7 +174,6 @@ html, body {
 
 [placeholder]:focus:-moz-placeholder, [placeholder]:hover:-moz-placeholder {
 	color: purple !important;
-	transition: .5s ease-in;
 }
 
 [placeholder]:focus::-moz-placeholder, [placeholder]:hover::-moz-placeholder {
@@ -188,5 +186,4 @@ html, body {
 
 [placeholder]:focus:-ms-input-placeholder, [placeholder]:hover:-ms-input-placeholder {
 	color: purple !important;
-	transition: .5s ease-in;
 }

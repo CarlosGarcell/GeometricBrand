@@ -24,17 +24,15 @@
 		<div class="col-md-12 upcoming">
 			<h3>PR&Oacute;XIMAMENTE</h3>
 		</div>
+
 		<div class="col-md-12 socialNetworks">
 			<h3>¡S&Iacute;GUENOS EN NUESTRAS REDES SOCIALES!</h3>
 			<div class="socialNetworksList row">
 				<section class="col-md-6 col-xs-12 instagram"><a href="https://instagram.com/geo_mcbo/"><img src="images/white-instagram.png">@GEO_MCBO</a></section>
 				<section class="col-md-6 col-xs-12 twitter"><a href=""><img src="images/white-twitter.png">@GEOMETRIC_BRAND</a></section>
 			</div>
-			<!-- <ul class="socialNetworksList row">
-				<li class="col-md-6 col-xs-12" id="instagram"><a href="https://instagram.com/geo_mcbo/"><img src="images/white-instagram.png">@GEO_MCBO</a></li>
-				<li class="col-md-6 col-xs-12" id="twitter"><a href=""><img src="images/white-twitter.png">@GEOMETRIC_BRAND</a></li>
-			</ul> -->
 		</div>
+
 		<div class="col-md-12 contactForm">
 			<section class="col-md-12 col-xs-12 contactFormHeader">
 				<h3>ENV&Iacute;ANOS UN MENSAJE</h3>
@@ -60,7 +58,7 @@
 					<input type="submit" class="btn btn-primary btn-lg" id="submitButton" value="Enviar">
 				</section>
 			</form>
-	</div>
+		</div>
 
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>

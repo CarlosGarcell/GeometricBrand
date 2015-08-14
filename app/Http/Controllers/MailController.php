@@ -42,6 +42,8 @@ class MailController extends Controller
 
 		$this->mailer->sendTo('emails.info', $data);
 
-		return redirect('/')->with(['notification' => '¡Gracias por contactarnos! Pronto responderemos a tu solicitud.']);
+		flash('notification', '¡Gracias por contactarnos! Pronto responderemos a tu solicitud.');
+
+		return redirect('/');
 	}
 }
