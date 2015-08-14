@@ -25,7 +25,7 @@ class SendMailRequest extends Request {
 			'name' => 'required',
 			'lastName' => 'required',
 			'email' => 'required|email',
-			// 'phone' => 'required|min:7'
+			'message' => 'required'
 		];
 	}
 

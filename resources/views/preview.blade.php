@@ -8,6 +8,12 @@
 </head>
 <body class="backstretch">
 
+	<!-- Email sent notification -->
+	@include('partials.EmailSentNotification')
+	<div class="container">
+		<div class="alert alert-success customAlert" role="alert">¡Gracias por contactarnos! Pronto responderemos a tu solicitud.</div>
+	</div>
+
 	<div class="container content">
 		<div class="col-md-12 pageHeader container">
 			<section class="pageHeaderText">
@@ -20,10 +26,14 @@
 		</div>
 		<div class="col-md-12 socialNetworks">
 			<h3>¡S&Iacute;GUENOS EN NUESTRAS REDES SOCIALES!</h3>
-			<ul class="socialNetworksList row">
-				<li class="col-md-6 col-xs-12" id="instagram">INSTAGRAM</li>
-				<li class="col-md-6 col-xs-12" id="twitter">TWITTER</li>
-			</ul>
+			<div class="socialNetworksList row">
+				<section class="col-md-6 col-xs-12 instagram"><a href="https://instagram.com/geo_mcbo/"><img src="images/white-instagram.png">@GEO_MCBO</a></section>
+				<section class="col-md-6 col-xs-12 twitter"><a href=""><img src="images/white-twitter.png">@GEOMETRIC_BRAND</a></section>
+			</div>
+			<!-- <ul class="socialNetworksList row">
+				<li class="col-md-6 col-xs-12" id="instagram"><a href="https://instagram.com/geo_mcbo/"><img src="images/white-instagram.png">@GEO_MCBO</a></li>
+				<li class="col-md-6 col-xs-12" id="twitter"><a href=""><img src="images/white-twitter.png">@GEOMETRIC_BRAND</a></li>
+			</ul> -->
 		</div>
 		<div class="col-md-12 contactForm">
 			<section class="col-md-12 col-xs-12 contactFormHeader">
@@ -34,17 +44,17 @@
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 				<section class="userData">
 					<section class="col-md-6 col-xs-12">
-						<input type="text" class="form-control" placeholder="Nombre" autofocus="true" id="name">
+						<input type="text" class="form-control" placeholder="Nombre" name="name" autofocus="true" id="name">
 					</section>
 					<section class="userData col-md-6 col-xs-12">
-						<input type="text" class="form-control" placeholder="Apellido" id="lastName">
+						<input type="text" class="form-control" placeholder="Apellido" name="lastName" id="lastName">
 					</section>
 				</section>
 				<section class="userData col-md-12 col-xs-12">
-					<input type="email" class="form-control" placeholder="Email" id="email">
+					<input type="email" class="form-control" placeholder="Email" name="email" id="email">
 				</section>
 				<section class="userData col-md-12 col-xs-12">
-					<textarea class="form-control" rows="4" placeholder="Mensaje" id="message"></textarea>
+					<textarea class="form-control" rows="4" placeholder="Mensaje" name="message" id="message"></textarea>
 				</section>
 				<section class="col-md-12 col-xs-12">
 					<input type="submit" class="btn btn-primary btn-lg" id="submitButton" value="Enviar">
@@ -57,6 +67,13 @@
 	<script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
 	<script type="text/javascript" src="js/SlideshowPhotos.js"></script>
 	<script type="text/javascript" src="js/FormFieldBehavior.js"></script>
-
+	
+	<script type="text/javascript">
+	$(document).ready(function()
+	{
+		$('div.customAlert').slideDown(300);
+		$('div.customAlert').delay(4000).slideUp(300);
+	});
+	</script>
 </body>
 </html>

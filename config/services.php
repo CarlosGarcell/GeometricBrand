@@ -15,8 +15,8 @@ return [
 	*/
 
 	'mailgun' => [
-		'domain' => '',
-		'secret' => '',
+		'domain' => 'ag.geometricbrand.com',
+		'secret' => 'key-baaf05562a7b8f62660c9ca3da751270',
 	],
 
 	'mandrill' => [

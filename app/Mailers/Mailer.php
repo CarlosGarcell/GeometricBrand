@@ -6,7 +6,7 @@ class Mailer
 	{
 		\Mail::queue($view, $data, function($message) use ($data)
 		{
-			$message->from($data['email'] , $data['name']." ".$data['lastName']);
+			$message->from($data['email'], "GeometricBrand");
 
 			$message->to('info@geometricbrand.com', 'Geometric')->subject('Solicitud de Información');
 		});

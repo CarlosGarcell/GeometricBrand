@@ -29,12 +29,6 @@
 				<h4>{!! $email !!}</h4>
 
 			</div>
-			
-			<div class="user-phone">
-
-				<h4>{!! $phone !!}</h4>
-
-			</div>
 
 		</div>
 

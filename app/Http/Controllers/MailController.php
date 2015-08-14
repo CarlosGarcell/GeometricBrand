@@ -3,8 +3,9 @@
 use Mailers\Mailer;
 use App\Http\Requests\SendMailRequest;
 use App\Http\Controllers\Controller;
+use Guzzle\Http\PostFile;
 
-use Illuminate\Http\Request;
+use Request;
 
 class MailController extends Controller 
 {
@@ -24,10 +25,10 @@ class MailController extends Controller
 	public function sendMailingInfoToEmailHandler(SendMailRequest $request)
 	{
 		$input = $request->all();
+
 		$name = $input['name'];
 		$lastName = $input['lastName'];
 		$email = $input['email'];
-		// $phone = $input['phone'];
 		$requestedInfo = $input['message'];
 		$pathToImage = public_path()."/images/Geometric-modelo.png";
 
@@ -35,13 +36,12 @@ class MailController extends Controller
 			'name' => $name,
 			'lastName' => $lastName,
 			'email' => $email,
-			'phone' => $phone,
 			'requestedInfo' => $requestedInfo,
 			'pathToImage' => $pathToImage
 		];
 
 		$this->mailer->sendTo('emails.info', $data);
 
-		return redirect('/')->with(['message' => '¡Gracias por escribirnos! Pronto te responderemos.']);
+		return redirect('/')->with(['notification' => '¡Gracias por contactarnos! Pronto responderemos a tu solicitud.']);
 	}
 }
