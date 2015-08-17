@@ -9,16 +9,13 @@ html, body {
 	src: url('/fonts/XtreemMedium_Demo.ttf');
 }
 
-.confirmationAlert {
-	padding-top: 10px;
-}
-
-.customAlert {
+.customFlashMessage {
+	margin-top: 10px;
 	background-color: #fff;
 	color: purple;
+	list-style-type: circle;
 	font-weight: 200;
 	font-size: 1.3em;
-	display: none;
 }
 
 .content {

@@ -12,4 +12,4 @@
 */
 
 Route::get('/', 'WelcomeController@index');
-Route::post('/mail', 'MailController@sendMailingInfoToEmailHandler');
+Route::post('/mail', ['middleware' => 'guest', 'uses' => 'MailController@sendMailingInfoToEmailHandler']);

@@ -9,10 +9,11 @@
 <body class="backstretch">
 
 	<!-- Email sent notification -->
+	<!-- @include('flash::message') -->
 	@include('partials.EmailSentNotification')
-	<div class="container">
-		<div class="alert alert-success customAlert" role="alert">¡Gracias por contactarnos! Pronto responderemos a tu solicitud.</div>
-	</div>
+
+	<!-- Error display -->
+	@include('partials.InformationRequestValidation')
 
 	<div class="container content">
 		<div class="col-md-12 pageHeader container">
@@ -38,26 +39,26 @@
 				<h3>ENV&Iacute;ANOS UN MENSAJE</h3>
 			</section>
 
-			<form action="http://geometric.app/mail" method="POST" accept-charset="UTF-8">
+			{!! Form::open(['url' => '/mail']) !!}
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 				<section class="userData">
 					<section class="col-md-6 col-xs-12">
-						<input type="text" class="form-control" placeholder="Nombre" name="name" autofocus="true" id="name">
+						<input type="text" class="form-control" placeholder="Nombre" name="name" autofocus="autofocus" id="name" value="<?php echo Request::old('name'); ?>">
 					</section>
 					<section class="userData col-md-6 col-xs-12">
-						<input type="text" class="form-control" placeholder="Apellido" name="lastName" id="lastName">
+						<input type="text" class="form-control" placeholder="Apellido" name="lastName" id="lastName" value="<?php echo \Request::old('lastName'); ?>">
 					</section>
 				</section>
 				<section class="userData col-md-12 col-xs-12">
-					<input type="email" class="form-control" placeholder="Email" name="email" id="email">
+					<input type="email" class="form-control" placeholder="Email" name="email" id="email" value="<?php echo \Request::old('email'); ?>">
 				</section>
 				<section class="userData col-md-12 col-xs-12">
-					<textarea class="form-control" rows="4" placeholder="Mensaje" name="message" id="message"></textarea>
+					<textarea class="form-control" rows="4" placeholder="Mensaje" name="message" id="message"><?php echo \Request::old('message'); ?></textarea>
 				</section>
 				<section class="col-md-12 col-xs-12">
 					<input type="submit" class="btn btn-primary btn-lg" id="submitButton" value="Enviar">
 				</section>
-			</form>
+			{!! Form::close() !!}
 		</div>
 
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
@@ -67,11 +68,10 @@
 	<script type="text/javascript" src="js/FormFieldBehavior.js"></script>
 	
 	<script type="text/javascript">
-	$(document).ready(function()
-	{
-		$('div.customAlert').slideDown(300);
-		$('div.customAlert').delay(4000).slideUp(300);
-	});
+		$(document).ready(function() {
+			// $('div.customFlashMessage').slideDown(300);
+			$('div.customFlashMessage').delay(4000).slideUp(300);
+		});
 	</script>
 </body>
 </html>

@@ -3,9 +3,6 @@
 use Mailers\Mailer;
 use App\Http\Requests\SendMailRequest;
 use App\Http\Controllers\Controller;
-use Guzzle\Http\PostFile;
-
-use Request;
 
 class MailController extends Controller 
 {
@@ -32,7 +29,8 @@ class MailController extends Controller
 		$requestedInfo = $input['message'];
 		$pathToImage = public_path()."/images/Geometric-modelo.png";
 
-		$data = [
+		$data = 
+		[
 			'name' => $name,
 			'lastName' => $lastName,
 			'email' => $email,
@@ -42,8 +40,8 @@ class MailController extends Controller
 
 		$this->mailer->sendTo('emails.info', $data);
 
-		flash('notification', '¡Gracias por contactarnos! Pronto responderemos a tu solicitud.');
+		// flash()->custom('¡Gracias por contactarnos! Pronto responderemos a tu solicitud.', 'customFlashMessage');
 
-		return redirect('/');
+		return redirect('/')->with(['notification' => '¡Gracias por contactarnos! Pronto responderemos a tu solicitud']);
 	}
 }

@@ -21,12 +21,24 @@ class SendMailRequest extends Request {
 	 */
 	public function rules()
 	{
-		return [
+		return 
+		[
 			'name' => 'required',
 			'lastName' => 'required',
 			'email' => 'required|email',
 			'message' => 'required'
 		];
 	}
+
+	/**
+	 * Override the response behavior
+	 *
+	 * @param array
+	 * @return Response
+	 */
+	// public function response(array $errors)
+	// {
+	// 	return redirect('/')->withInput();
+	// }
 
 }
