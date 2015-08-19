@@ -1,7 +1,7 @@
 html, body {
 	color: white;
 	-webkit-font-smoothing: antialiased;
-	height: 100%;
+	font-family: "Helvetica";
 }
 
 @font-face {
@@ -20,34 +20,21 @@ html, body {
 
 .content {
 	padding-top: 40px;
-	padding-bottom: 20px;
+	margin: 0 auto;
 }
 
 .pageHeader {
 	max-width: 50% !important;
 	margin: 0 auto;
+	padding: 15px;
 	float: none;
 	border-bottom: 5px solid white;
 	text-align: center;
 	font-family: XtreemMedium;
 }
 
-.pageHeaderText {
-	padding-bottom: 10px;
-}
-
 .pageHeader h2 {
 	font-size: 5em;
-}
-
-@media (min-width: 400px) and (max-width: 441px) {
-	.pageHeader h2 {
-		font-size: 2.9em;
-	}
-
-	.upcoming h3 {
-		font-size: 1.7em !important;
-	}
 }
 
 .upcoming {
@@ -58,9 +45,14 @@ html, body {
 	text-align: center;
 }
 
-.upcoming h3 {
-	font-size: 2em;
-	font-family: "Helvetica";
+@media (max-width: 647px) {
+	.pageHeader h2 {
+		font-size: 2.9em;
+	}
+
+	.upcoming h3 {
+		font-size: 1.3em !important;
+	}
 }
 
 .socialNetworks {
@@ -81,24 +73,14 @@ html, body {
 }
 
 .socialNetworks h3 {
-	font-family: "Helvetica";
-}
-
-.socialNetworksList ul {
-	vertical-align: middle;
-}
-
-.socialNetworksList li {
-	font-family: "Helvetica";
-	display: inline;
-	list-style: none;
+	font-size: 20px;	
 }
 
 .socialNetworksList a {
 	text-decoration: none;
 	color: #fff;
+	font-weight: 400;
 	margin-left: 5px;
-	font-size: 1.5em;
 }
 
 .contactForm {
@@ -106,10 +88,6 @@ html, body {
 	margin: 0 auto;
 	float: none;
 	text-align: center;
-}
-
-.userData {
-	padding-bottom: 15px;
 }
 
 .userData input, .userData textarea {
@@ -127,10 +105,6 @@ html, body {
 	font-weight: 400;	
 }
 
-.contactForm h3 {
-	font-family: "Helvetica";
-}
-
 #submitButton {
 	width: 100%;
 	background-color: transparent;
@@ -143,12 +117,6 @@ html, body {
 	background-color: white;
 	color: purple;
 	font-weight: 400;
-}
-
-@media (min-width: 400px) and (max-width: 991px) {
-	.userData section:nth-child(2) {
-		padding-top: 15px;
-	}
 }
 
 /* Placeholder styling */

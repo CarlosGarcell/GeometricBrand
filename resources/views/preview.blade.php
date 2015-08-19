@@ -3,10 +3,16 @@
 <head>
 	<title>Geometric</title>
 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta charset="UTF-8">
+	<meta name="author" content="Carlos Garcell">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="Design, Necklace, Venezuelan, Geometric, Brand, GeometricBrand">
+
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/preview.css">
 </head>
-<body class="backstretch">
+<body>
 
 	<!-- Email sent notification -->
 	<!-- @include('flash::message') -->
@@ -34,32 +40,31 @@
 			</div>
 		</div>
 
-		<div class="col-md-12 contactForm">
+		<div class="col-md-12 col-xs-12 contactForm">
 			<section class="col-md-12 col-xs-12 contactFormHeader">
 				<h3>ENV&Iacute;ANOS UN MENSAJE</h3>
 			</section>
 
-			{!! Form::open(['url' => '/mail']) !!}
+			{!! Form::open(['url' => '/mail', 'class' => 'userData']) !!}
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
-				<section class="userData">
-					<section class="col-md-6 col-xs-12">
-						<input type="text" class="form-control" placeholder="Nombre" name="name" autofocus="autofocus" id="name" value="<?php echo Request::old('name'); ?>">
-					</section>
-					<section class="userData col-md-6 col-xs-12">
-						<input type="text" class="form-control" placeholder="Apellido" name="lastName" id="lastName" value="<?php echo \Request::old('lastName'); ?>">
-					</section>
+				<section class="col-md-6 col-xs-12 form-group">
+					<input type="text" class="form-control" placeholder="Nombre" name="name" autofocus="autofocus" id="name" value="<?php echo Request::old('name'); ?>">
 				</section>
-				<section class="userData col-md-12 col-xs-12">
+				<section class="col-md-6 col-xs-12 form-group">
+					<input type="text" class="form-control" placeholder="Apellido" name="lastName" id="lastName" value="<?php echo \Request::old('lastName'); ?>">
+				</section>
+				<section class="col-md-12 col-xs-12 form-group">
 					<input type="email" class="form-control" placeholder="Email" name="email" id="email" value="<?php echo \Request::old('email'); ?>">
 				</section>
-				<section class="userData col-md-12 col-xs-12">
+				<section class="col-md-12 col-xs-12 form-group">
 					<textarea class="form-control" rows="4" placeholder="Mensaje" name="message" id="message"><?php echo \Request::old('message'); ?></textarea>
 				</section>
-				<section class="col-md-12 col-xs-12">
+				<section class="col-md-12 col-xs-12 form-group">
 					<input type="submit" class="btn btn-primary btn-lg" id="submitButton" value="Enviar">
 				</section>
 			{!! Form::close() !!}
 		</div>
+	</div>
 
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
