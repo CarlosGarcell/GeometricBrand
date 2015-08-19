@@ -10,6 +10,7 @@
 	<meta name="keywords" content="Design, Necklace, Venezuelan, Geometric, Brand, GeometricBrand">
 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/vegas.min.css">
 	<link rel="stylesheet" type="text/css" href="css/preview.css">
 </head>
 <body>
@@ -68,8 +69,8 @@
 
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
-	<script type="text/javascript" src="js/SlideshowPhotos.js"></script>
+	<script type="text/javascript" src="js/vegas.min.js"></script>
+	<script type="text/javascript" src="js/SlideshowPhotos.js"></script> 
 	<script type="text/javascript" src="js/FormFieldBehavior.js"></script>
 	
 	<script type="text/javascript">

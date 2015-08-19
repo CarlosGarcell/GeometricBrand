@@ -2,6 +2,7 @@ html, body {
 	color: white;
 	-webkit-font-smoothing: antialiased;
 	font-family: "Helvetica";
+	background-attachment: fixed !important; 
 }
 
 @font-face {

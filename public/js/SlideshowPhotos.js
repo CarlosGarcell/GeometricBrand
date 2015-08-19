@@ -1,8 +1,10 @@
-$.backstretch([
-	"/images/IMAGEN_1.jpg",
-	"/images/IMAGEN_2.jpg",
-	"/images/IMAGEN_3.jpg",
-	"/images/IMAGEN_4.jpg",
-	"/images/IMAGEN_5.jpg",
-	"/images/IMAGEN_6.jpg"
-], {duration : 3000, fade: 800});
+$("body").vegas({
+	slides : [
+		{ src: "/images/IMAGEN_1_tiny.jpg" },
+		{ src: "/images/IMAGEN_2_tiny.jpg" },
+		{ src: "/images/IMAGEN_3_tiny.jpg" },
+		{ src: "/images/IMAGEN_4_tiny.jpg" },
+		{ src: "/images/IMAGEN_5_tiny.jpg" },
+		{ src: "/images/IMAGEN_6_tiny.jpg" }
+	]
+});
